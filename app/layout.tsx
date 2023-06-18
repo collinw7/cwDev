@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import { MainNav } from "@/components/main-nav";
+import { GlobalHeader } from "@/components/global-header";
 import { Provider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="!scroll-smooth">
       <body className={inter.className}>
         <Provider>
-          <MainNav />
+          <GlobalHeader />
           {children}
         </Provider>
       </body>
