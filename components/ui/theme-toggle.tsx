@@ -1,14 +1,12 @@
 "use client";
 
-import { Label } from "./label";
-import { Switch } from "./switch";
+import { ThemeSwitch } from "./theme-switch";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { MoonStar, Sun } from "lucide-react";
 
 const ThemeToggle = (): JSX.Element => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -19,10 +17,10 @@ const ThemeToggle = (): JSX.Element => {
   }
 
   return (
-    <>
-      <Switch
+    <div className="py-5">
+      <ThemeSwitch
         id="theme-toggle"
-        defaultChecked={theme === "dark"}
+        defaultChecked={resolvedTheme === "dark"}
         onCheckedChange={(checked: boolean) => {
           if (!checked) {
             setTheme("light");
@@ -31,10 +29,7 @@ const ThemeToggle = (): JSX.Element => {
           }
         }}
       />
-      <Label htmlFor="theme-toggle" className="h-auto">
-        <MoonStar />
-      </Label>
-    </>
+    </div>
   );
 };
 

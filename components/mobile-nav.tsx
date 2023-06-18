@@ -10,7 +10,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import { PanelLeftOpen } from "lucide-react";
+import { MenuSquare } from "lucide-react";
+import { scrollTop } from "@/lib/scrollTop";
 
 const MobileNav = (): JSX.Element => {
   const [open, setOpen] = useState(false);
@@ -20,11 +21,17 @@ const MobileNav = (): JSX.Element => {
       <SheetTrigger asChild>
         <div className="w-1/2 flex py-3 md:hidden">
           <Button variant="ghost" className="flex md:hidden px-2">
-            <PanelLeftOpen />
+            <MenuSquare />
           </Button>
         </div>
       </SheetTrigger>
-      <SheetContent position="left"></SheetContent>
+      <div>
+        <h3 className="py-4 md:hidden cursor-pointer" onClick={scrollTop}>
+          CWSE
+        </h3>
+      </div>
+      <SheetContent position="left">
+      </SheetContent>
     </Sheet>
   );
 };
