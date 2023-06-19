@@ -82,7 +82,7 @@
     @apply border-b;
   }
   main {
-    @apply p-12;
+    @apply p-6;
   }
   h1 {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
@@ -98,5 +98,8 @@
   }
   p {
     @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+  section {
+    @apply mb-4
   }
 }

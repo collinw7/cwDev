@@ -20,12 +20,12 @@ React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
     {...props}
     ref={ref}
     >
-    <SwitchPrimitives.Thumb asChild
+    <SwitchPrimitives.Thumb
       className={cn(
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
+        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0 group"
       )}
     >
-      {useTheme().theme === "dark" ? <MoonStar /> : <Sun />}
+      {useTheme().resolvedTheme === "dark" ? <MoonStar className="h-5 w-5" /> : <Sun className="h-5 w-5"/>}
     </SwitchPrimitives.Thumb>
   </SwitchPrimitives.Root>
 ));

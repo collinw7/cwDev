@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactNode } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,6 +10,23 @@ import {
 import Link from "next/link";
 import { scrollTop } from "@/lib/scrollTop";
 
+type LinkProps = {
+  children: ReactNode;
+  href: string;
+};
+
+const NavLink = ({ children, href }: LinkProps): JSX.Element => {
+  return (
+    <NavigationMenuItem className="list-none">
+      <Link href={href} replace legacyBehavior passHref>
+        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          {children}
+        </NavigationMenuLink>
+      </Link>
+    </NavigationMenuItem>
+  );
+};
+
 const MainNav = (): JSX.Element => {
   return (
     <div className="hidden md:flex w-1/2">
@@ -16,20 +34,8 @@ const MainNav = (): JSX.Element => {
         CWSE
       </h3>
       <NavigationMenu className="ml-10 justify-start space-x-2">
-        <NavigationMenuItem className="list-none">
-          <Link href="#about-me" replace legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About Me
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem className="list-none">
-          <Link href="" replace legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Projects
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        <NavLink href="#about-me">About Me</NavLink>
+        <NavLink href="#projects">Projects</NavLink>
       </NavigationMenu>
     </div>
   );

@@ -17,7 +17,7 @@ const ThemeToggle = (): JSX.Element => {
   }
 
   return (
-    <div className="py-5">
+    <div className="pt-5 pb-3">
       <ThemeSwitch
         id="theme-toggle"
         defaultChecked={resolvedTheme === "dark"}
