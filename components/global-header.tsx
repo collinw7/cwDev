@@ -1,14 +1,8 @@
-import { UserPlus } from "lucide-react";
 import { MainNav } from "./main-nav";
 import { MobileNav } from "./mobile-nav";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ui/theme-toggle";
-import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-} from "./ui/tooltip";
+import { SocialMenu } from "./social-menu";
 
 const GlobalHeader = (): JSX.Element => {
   return (
@@ -17,18 +11,7 @@ const GlobalHeader = (): JSX.Element => {
         <MainNav />
         <MobileNav />
         <div className="flex w-1/2 justify-end space-x-4">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="ghost" className="px-2 my-3">
-                  <UserPlus />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>My socials</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <SocialMenu />
           <ThemeToggle />
         </div>
       </div>
