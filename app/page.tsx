@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { IntroComponent } from "@/components/intro-component";
 import Link from "next/link";
+import { TempAlert } from "@/components/ui/temp-alert";
 
 export default function Home() {
   return (
@@ -21,9 +22,17 @@ export default function Home() {
         <h2 className="inline">My Work</h2>
         <div className="mt-4">
           <h4>dcwilljrlab.org</h4>
-          Info site I built for my father. He runs a research lab at UNC. <Link href="https://www.dcwilljrlab.org" target="blank" className="underline">Learn more.</Link>
+          Info site I built for my father. He runs a research lab at UNC.{" "}
+          <Link
+            href="https://www.dcwilljrlab.org"
+            target="blank"
+            className="underline"
+          >
+            Learn more.
+          </Link>
         </div>
       </section>
+      <TempAlert />
     </main>
   );
 }
