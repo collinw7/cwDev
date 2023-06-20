@@ -19,10 +19,10 @@ export default function Home() {
       <section id="projects-section">
         <a id="projects" className="top-[-2rem] hidden relative"></a>
         <h2 className="inline">My Work</h2>
-        <p>
+        <div className="mt-4">
           <h4>dcwilljrlab.org</h4>
           Info site I built for my father. He runs a research lab at UNC. <Link href="https://www.dcwilljrlab.org" target="blank" className="underline">Learn more.</Link>
-        </p>
+        </div>
       </section>
     </main>
   );
