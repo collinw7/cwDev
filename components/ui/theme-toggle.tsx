@@ -3,6 +3,7 @@
 import { ThemeSwitch } from "./theme-switch";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { Skeleton } from "./skeleton";
 
 const ThemeToggle = (): JSX.Element => {
   const [mounted, setMounted] = useState(false);
@@ -13,7 +14,7 @@ const ThemeToggle = (): JSX.Element => {
   }, []);
 
   if (!mounted) {
-    return <></>;
+    return <Skeleton className="w-12 h-5 mt-6"/>;
   }
 
   return (

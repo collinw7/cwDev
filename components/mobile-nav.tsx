@@ -15,11 +15,7 @@ import {
 import { MenuSquare } from "lucide-react";
 import { scrollTop } from "@/lib/scrollTop";
 import Link from "next/link";
-
-type LinkProps = {
-  children?: ReactNode;
-  href: string;
-};
+import { LinkProps } from "@/lib/linkProps";
 
 const MobileNavLink = ({ href, children }: LinkProps): JSX.Element => {
   return (
