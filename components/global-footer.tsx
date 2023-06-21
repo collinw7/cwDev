@@ -1,5 +1,9 @@
 const GlobalFooter = (): JSX.Element => {
-  return <></>
-}
+  return (
+    <footer className="b-0 container">
+      <p></p>
+    </footer>
+  );
+};
 
 export { GlobalFooter };

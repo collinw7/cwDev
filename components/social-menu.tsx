@@ -20,7 +20,7 @@ import { LinkProps } from "@/lib/linkProps";
 const SocialLink = ({ href, children, type }: LinkProps): JSX.Element => {
   return (
     <>
-      <Link href={href} target="blank" className="flex">
+      <Link href={href} target="blank" className="flex hover:[&>p]:text-accent-foreground">
         {type === "avatar" ? (
           <Avatar />
         ) : type === "linkedin" ? (

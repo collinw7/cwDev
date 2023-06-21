@@ -1,6 +1,5 @@
 import { MainNav } from "./main-nav";
 import { MobileNav } from "./mobile-nav";
-import { Button } from "./ui/button";
 import { ThemeToggle } from "./ui/theme-toggle";
 import { SocialMenu } from "./social-menu";
 

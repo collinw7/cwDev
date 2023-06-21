@@ -1,6 +1,5 @@
 "use client";
 
-import { ReactNode } from "react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import {
@@ -12,10 +11,10 @@ import {
   SheetTrigger,
   SheetClose,
 } from "./ui/sheet";
-import { MenuSquare } from "lucide-react";
 import { scrollTop } from "@/lib/scrollTop";
 import Link from "next/link";
 import { LinkProps } from "@/lib/linkProps";
+import { HeaderLogo } from "./header-logo";
 
 const MobileNavLink = ({ href, children }: LinkProps): JSX.Element => {
   return (
@@ -35,7 +34,7 @@ const MobileNav = (): JSX.Element => {
       <SheetTrigger asChild>
         <div className="w-1/2 flex py-3 md:hidden">
           <Button variant="static" className="flex md:hidden px-2 ml-[-0.5rem]">
-            <MenuSquare />
+            <HeaderLogo />
           </Button>
         </div>
       </SheetTrigger>

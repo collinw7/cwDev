@@ -13,7 +13,7 @@ export default function Home() {
         <a id="about-me" className="top-[-2rem] hidden relative"></a>
         <h2 className="inline">Who am I?</h2>
         <p>
-          My name is Collin Williams. I am an upcoming developer and I love to
+          My name is Collin Williams. I&apos;m an upcoming developer and I love to
           learn.
         </p>
       </section>
@@ -26,7 +26,7 @@ export default function Home() {
           <Link
             href="https://www.dcwilljrlab.org"
             target="blank"
-            className="underline"
+            className="underline hover:text-accent-foreground"
           >
             Learn more.
           </Link>

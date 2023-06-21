@@ -8,7 +8,7 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import Link from "next/link";
-import { scrollTop } from "@/lib/scrollTop";
+import { HeaderLogo } from "./header-logo";
 
 type LinkProps = {
   children: ReactNode;
@@ -30,10 +30,8 @@ const NavLink = ({ children, href }: LinkProps): JSX.Element => {
 const MainNav = (): JSX.Element => {
   return (
     <div className="hidden md:flex w-1/2">
-      <h3 className="py-4 cursor-pointer" onClick={scrollTop}>
-        CWSE
-      </h3>
-      <NavigationMenu className="ml-10 justify-start space-x-2">
+      <HeaderLogo />
+      <NavigationMenu className="ml-5 justify-start space-x-2">
         <NavLink href="#about-me">About Me</NavLink>
         <NavLink href="#projects">Projects</NavLink>
       </NavigationMenu>

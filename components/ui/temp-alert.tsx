@@ -28,8 +28,8 @@ const TempAlert = (): JSX.Element => {
         <AlertDialogHeader>
           <AlertDialogTitle>Notice!</AlertDialogTitle>
           <AlertDialogDescription>
-            This site is in development and wont contain all information. I most
-            likely shared the link to show what I am capable of doing at
+            This site is in development and won&apos;t contain all information. I most
+            likely shared the link to show what I&apos;m capable of doing at
             present.
           </AlertDialogDescription>
         </AlertDialogHeader>
