@@ -33,22 +33,21 @@ const IntroComponent = (): JSX.Element => {
   const [fadeProp, setFadeProp] = useState<FadeProp>({ fade: "fade-in" });
   const [greeting, setGreeting] = useState(0);
 
-  function changeGreeting() {
-    setGreeting(greeting > WORDS.length - 2 ? 0 : greeting + 1);
-  }
-  function changeFade() {
-    fadeProp.fade === "fade-in"
-      ? setFadeProp({ fade: "fade-out" })
-      : setFadeProp({ fade: "fade-in" });
-  }
+  useEffect(() => {
+    const changeFade = setInterval(() => {
+      fadeProp.fade === "fade-in"
+        ? setFadeProp({ fade: "fade-out" })
+        : setFadeProp({ fade: "fade-in" });
+    }, 1750);
+    return () => clearInterval(changeFade);
+  }, [fadeProp]);
 
   useEffect(() => {
-    setTimeout(changeFade, 1750);
-  });
-
-  useEffect(() => {
-    setTimeout(changeGreeting, 3500);
-  });
+    const changeGreeting = setInterval(() => {
+      setGreeting(greeting > WORDS.length - 2 ? 0 : greeting + 1);
+    }, 3500);
+    return () => clearInterval(changeGreeting);
+  }, [greeting]);
 
   return (
     <div className="mb-20 text-center">

@@ -13,8 +13,8 @@ export default function Home() {
         <a id="about-me" className="top-[-2rem] hidden relative"></a>
         <h2 className="inline">Who am I?</h2>
         <p>
-          My name is Collin Williams. I&apos;m an upcoming developer and I love to
-          learn.
+          My name is Collin Williams. I&apos;m an up-and-coming developer and I love
+          to learn.
         </p>
       </section>
       <section id="projects-section">
