@@ -15,6 +15,7 @@ import { scrollTop } from "@/lib/scrollTop";
 import Link from "next/link";
 import { LinkProps } from "@/lib/linkProps";
 import { HeaderLogo } from "./header-logo";
+import { PanelLeftOpen } from "lucide-react";
 
 const MobileNavLink = ({ href, children }: LinkProps): JSX.Element => {
   return (
@@ -33,15 +34,15 @@ const MobileNav = (): JSX.Element => {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <div className="w-1/2 flex py-3 md:hidden">
-          <Button variant="static" className="flex md:hidden px-2 ml-[-0.5rem]">
-            <HeaderLogo />
+          <Button variant="static" className="px-2 ml-[-0.5rem]">
+            <PanelLeftOpen />
           </Button>
         </div>
       </SheetTrigger>
       <SheetContent position="left">
         <SheetClose asChild>
           <SheetTitle className="cursor-pointer pt-4" onClick={scrollTop}>
-            CWSE
+            <HeaderLogo />
           </SheetTitle>
         </SheetClose>
         <div className="flex flex-col space-y-4 pt-2">

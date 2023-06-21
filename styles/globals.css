@@ -102,4 +102,10 @@
   section {
     @apply mb-4;
   }
+  .fade-in {
+    @apply transition-opacity duration-1000 opacity-100;
+  }
+  .fade-out {
+    @apply transition-opacity duration-1000 opacity-0;
+  }
 }

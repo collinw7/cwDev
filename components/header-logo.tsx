@@ -24,7 +24,7 @@ const HeaderLogo = (): JSX.Element => {
         src={resolvedTheme === "dark" ? LOGODARK : LOGOLIGHT}
         alt="CWSE Logo"
         onClick={scrollTop}
-        className="w-40 cursor-pointer hidden md:block"
+        className="w-40 cursor-pointer"
       />
     </>
   );
